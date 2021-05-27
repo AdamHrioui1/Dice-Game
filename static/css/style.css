@@ -137,6 +137,11 @@ input[type = "submit"]:hover {
     object-fit: cover;
 }
 
+#total {
+    color: #82a3ff;
+    margin-bottom: 20px;
+}
+
 .game_container {
     width: 500px;
     padding: 20px;
