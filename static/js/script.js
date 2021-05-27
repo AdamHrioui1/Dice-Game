@@ -12,11 +12,6 @@ var random_number = Math.floor(Math.random() * 6 + 1)
 
 var score_historique = [];
 
-repeat.addEventListener("click", e => {
-    e.preventDefault();
-    window.location.pathname = "/game";
-})
-
 roll.addEventListener("click", roll_it)
 
 function roll_it(e) {
@@ -27,6 +22,11 @@ function roll_it(e) {
     
         if(random_number == 1){
             score_historique.push(total_score);
+
+            let h1 = document.createElement("h1");
+            h1.innerText = total_score;
+            score_page.append(h1)
+
             roll.removeEventListener("click", roll_it);
             total.innerHTML = `Your score : ${total_score}`;
         }
@@ -42,9 +42,6 @@ function roll_it(e) {
             console.log(score_historique[i]);
         }*/
 
-        let h1 = document.createElement("h1");
-        h1.innerText = total_score;
-        score_page.append("h1")
 }
 
 logout.addEventListener("click", e => {
@@ -52,3 +49,9 @@ logout.addEventListener("click", e => {
     window.location.pathname = "/";
 })
 
+
+repeat.addEventListener("click", e => {
+    e.preventDefault();
+    roll.addEventListener("click", roll_it);
+    total_score = 0;
+})

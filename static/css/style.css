@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-    width: 100%;
+    min-width: 100%;
     max-width: 1000px;
     height: 100vh;
 
@@ -29,6 +29,7 @@ body {
 
     background-color: #f3f3f3;
 }
+
 
 nav {
     width: 100%;
@@ -133,9 +134,22 @@ input[type = "submit"]:hover {
 
 .home_img {
     height: 100vh;
-    min-width: 100vw;
+    width: 100vw;
     object-fit: cover;
 }
+
+.game {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background-color: #f3f3f3;
+}
+
 
 #total {
     color: #82a3ff;
@@ -145,6 +159,7 @@ input[type = "submit"]:hover {
 .game_container {
     width: 500px;
     padding: 20px;
+    margin: 80px 10px 10px;
 
     display: flex;
     align-items: center;
@@ -217,4 +232,33 @@ button:hover {
     outline: none;
 
     cursor: pointer;    
+}
+
+.score_page {
+    width: 300px;
+    height: 550px;
+
+    margin: 50px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    background-color: #fff;
+    border-radius: 20px;
+
+    box-shadow: 0 0px 50px -40px #000;
+
+    overflow-y: auto;
+}
+
+.score_page h1{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+
+    color: #82a3ff;
+    border-bottom: 1px solid #3d6beb;
 }

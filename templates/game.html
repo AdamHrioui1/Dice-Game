@@ -1,16 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1 id="total" ></h1>
-    <div class="game_container">
-        <h1>Player : Adam</h1>
-        <div class="img_container">
-            <div id="img" class="img"></div>
+    <div class="game">
+        
+        <div class="game_container">
+            <h1 id="total" ></h1>
+            <h1>Player : Adam</h1>
+            <div class="img_container">
+                <div id="img" class="img"></div>
+            </div>
+            <h1 id="score" >Score : 0</h1>
+            <div class="buttons_container">
+                <button id="repeat" >REPEAT</i></button>
+                <button id="roll" >ROLL</button>
+                <button id="logout" >LOGOUT</button>
+            </div>
         </div>
-        <h1 id="score" >Score : 0</h1>
-        <div class="buttons_container">
-            <button id="repeat" >REPEAT</i></button>
-            <button id="roll" >ROLL</button>
-            <button id="logout" >LOGOUT</button>
+        
+        <div id="score_page" class="score_page">
+            <h1>Score Historique :</h1>
         </div>
     </div>
 {% endblock content %}
