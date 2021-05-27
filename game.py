@@ -4,19 +4,19 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("index.html", title = 'Home')
 
-@app.route("/login")
+@app.route("/login", methods=['GET', 'POST'])
 def login():
-    return "<h1>login</h1>"
+    return render_template("login.html", title = "login")
 
-@app.route("/logout")
+@app.route("/logout", methods=['GET', 'POST'])
 def logout():
-    return "<h1>logout</h1>"
+    return render_template("logout.html", title = "logout")
 
-@app.route("/game")
+@app.route("/game", methods=['GET', 'POST'])
 def game():
-    return "<h1>game</h1>"
+    return render_template("game.html", title = "game")
 
 if __name__ == '__main__':
     app.run(debug=True, port=5003)
