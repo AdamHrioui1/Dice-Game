@@ -254,7 +254,7 @@ button:hover {
     overflow-y: auto;
 }
 
-.score_page h1{
+.score_page * {
     width: 100%;
     padding: 20px;
     text-align: center;
