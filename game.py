@@ -18,6 +18,9 @@ def logout():
 def game():
     return render_template("game.html", title = "Game")
 
+@app.route("/score", methods=['GET', 'POST'])
+def score():
+    return render_template("score.html", title = "Score")
 
 if __name__ == '__main__':
     app.run(debug=True, port=5003)

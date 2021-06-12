@@ -9,7 +9,6 @@ const score_page = document.getElementById("score_page");
 var counter = 0;
 var total_score = 0;
 var random_number = Math.floor(Math.random() * 6 + 1)
-
 var score_historique = [];
 
 roll.addEventListener("click", roll_it)
@@ -34,14 +33,6 @@ function roll_it(e) {
             total_score += random_number;
         }
         score.innerHTML = `Score : ${total_score}`;
-
-        //console.log(score_historique);
-
-        /*for(let i = 0; i < score_historique.length; i++){
-            score_page.innerText += `<p>${score_historique[i]}</p>`;
-            console.log(score_historique[i]);
-        }*/
-
 }
 
 logout.addEventListener("click", e => {
@@ -52,6 +43,8 @@ logout.addEventListener("click", e => {
 
 repeat.addEventListener("click", e => {
     e.preventDefault();
-    roll.addEventListener("click", roll_it);
     total_score = 0;
+    score.innerHTML = `Score : ${total_score}`;
+    total.innerHTML = `Your score : ${total_score}`;
+    roll.addEventListener("click", roll_it);
 })
